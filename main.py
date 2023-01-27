@@ -31,20 +31,20 @@ def create_contact(typ, ilosc):
     lista = []
     for _ in range(ilosc):
         if typ == "basic":
-            n = fake.first_name()
-            f = fake.last_name()
-            p = fake.phone_number()
-            e = f"{n}{f}@gmail.com"
-            lista.append(BaseContact(n, f, p, e))
+            random_name = fake.first_name()
+            random_family = fake.last_name()
+            random_number = fake.phone_number()
+            semi_random_mail = f"{random_name}{random_family}@gmail.com"
+            lista.append(BaseContact(random_name, random_family, random_number, semi_random_mail))
         if typ == "business":
-            n = fake.first_name()
-            f = fake.last_name()
-            p = fake.phone_number()
-            e = f"{n}{f}@gmail.com"
-            r = fake.job()
-            c = fake.company()
-            wp = fake.phone_number()
-            lista.append(BusinessContact(r, c, wp, n, f, p, e))
+            random_name = fake.first_name()
+            random_family = fake.last_name()
+            random_number = fake.phone_number()
+            semi_random_mail = f"{random_name}{random_family}@gmail.com"
+            random_role = fake.job()
+            random_company = fake.company()
+            randomo_workphone = fake.phone_number()
+            lista.append(BusinessContact(random_role, random_company, randomo_workphone, random_name, random_family, random_number, semi_random_mail))
     return lista        
 
 if __name__ == "__main__":
